@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'gis_rest_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',#django.contrib.gis.db.backends.postgis',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'nairobigis',
         'USER': 'postgres',
         'PASSWORD': '123456',
