@@ -11,24 +11,6 @@ from django.db import models
 from django.contrib.gis.db import models
 
 
-class NairobiCounty(models.Model):
-    geom = models.PolygonField(blank=True, null=True)
-    objectid = models.IntegerField(blank=True, null=True)
-    area = models.FloatField(blank=True, null=True)
-    perimeter = models.FloatField(blank=True, null=True)
-    county3_field = models.FloatField(db_column='county3_', blank=True, null=True)  # Field renamed because it ended with '_'.
-    county3_id = models.FloatField(blank=True, null=True)
-    county = models.CharField(max_length=20, blank=True, null=True)
-    shape_leng = models.FloatField(blank=True, null=True)
-    shape_area = models.FloatField(blank=True, null=True)
-    number_2009_popul = models.CharField(db_column='2009_popul', max_length=50, blank=True, null=True)  # Field renamed because it wasn't a valid Python identifier.
-    pop = models.CharField(max_length=50, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'nairobi_county'
-
-
 class NairobiHealthFacilities(models.Model):
     geom = models.PointField(blank=True, null=True)
     addr_city = models.CharField(db_column='addr:city', max_length=255, blank=True, null=True)  # Field renamed to remove unsuitable characters.

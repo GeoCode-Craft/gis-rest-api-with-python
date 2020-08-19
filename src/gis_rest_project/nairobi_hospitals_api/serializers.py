@@ -1,16 +1,6 @@
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
-from .models import NairobiCounty, NairobiSubCounties,NairobiHealthFacilities
-
-
-
-class NairobiCountySerializer(GeoFeatureModelSerializer):
-
-	class Meta:
-		model = NairobiCounty
-		fields = '__all__'
-		geo_field = 'geom'
-
+from .models import  NairobiSubCounties,NairobiHealthFacilities
 
 class NairobiSubCountiesSerializer(GeoFeatureModelSerializer):
 
