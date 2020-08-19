@@ -31,10 +31,10 @@ class NairobiCounty(models.Model):
 
 class NairobiHealthFacilities(models.Model):
     geom = models.PointField(blank=True, null=True)
-    addr_city = models.CharField(db_column='addr:city', max_length=-1, blank=True, null=True)  # Field renamed to remove unsuitable characters.
-    addr_street = models.CharField(db_column='addr:street', max_length=-1, blank=True, null=True)  # Field renamed to remove unsuitable characters.
-    name = models.CharField(max_length=-1, blank=True, null=True)
-    contact_phone = models.CharField(db_column='contact:phone', max_length=-1, blank=True, null=True)  # Field renamed to remove unsuitable characters.
+    addr_city = models.CharField(db_column='addr:city', max_length=255, blank=True, null=True)  # Field renamed to remove unsuitable characters.
+    addr_street = models.CharField(db_column='addr:street', max_length=255, blank=True, null=True)  # Field renamed to remove unsuitable characters.
+    name = models.CharField(max_length=255, blank=True, null=True)
+    contact_phone = models.CharField(db_column='contact:phone', max_length=255, blank=True, null=True)  # Field renamed to remove unsuitable characters.
 
     class Meta:
         managed = False
