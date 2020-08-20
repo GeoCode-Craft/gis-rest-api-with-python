@@ -5,7 +5,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'nairobihealthfacilities', views.NairobiHealthFacilitiesViewSet)
-router.register(r'nairobisubcounty', views.NairobiSubCountiesViewSet)
+router.register(r'nairobisubcounties', views.NairobiSubCountiesViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
