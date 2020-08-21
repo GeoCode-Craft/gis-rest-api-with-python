@@ -1,9 +1,7 @@
 # Create your views here.
 from rest_framework import viewsets, status
 from rest_framework.response import Response
-
 from django.contrib.gis.db.models.functions import Distance
-
 from django.contrib.gis.geos import GEOSGeometry,Point
 from rest_framework.decorators import action
 from django_filters import rest_framework  as filters
